@@ -1653,7 +1653,7 @@ impl Device {
                 }
             }
             ImageFormat::RGB8 => (gl::RGB, 3, data, gl::UNSIGNED_BYTE),
-            ImageFormat::RGBA8 => (get_gl_format_bgra(self.gl()), 4, data, gl::UNSIGNED_BYTE),
+            ImageFormat::RGBA8 => (gl::RGBA, 4, data, gl::UNSIGNED_BYTE),
             ImageFormat::RG8 => (gl::RG, 2, data, gl::UNSIGNED_BYTE),
             ImageFormat::RGBAF32 => (gl::RGBA, 16, data, gl::FLOAT),
             ImageFormat::Invalid => unreachable!(),
